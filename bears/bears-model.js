@@ -9,25 +9,25 @@ module.exports = {
 };
 
 function find() {
-  return db('zoos');
+  return db('bears');
 }
 
 function findById(id) {
-  return db('zoos').where({ id });
+  return db('bears').where({ id });
 }
 
 function update(id, changes) {
-  return db('zoos')
+  return db('bears')
     .where({ id })
     .update(changes);
 }
 
 function add(zoo) {
-  return db('zoos').insert(zoo);
+  return db('bears').insert(zoo);
 }
 
 function remove(id) {
-  return db('zoos')
+  return db('bears')
     .where({ id })
     .del();
 }
